@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante La Tradición</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🍽 Restaurante La Tradición</h1>
+    <p>El sabor de siempre</p>
+</header>
+
+<nav>
+    <a href="#menu">Menú</a>
+    <a href="#comentarios">Comentarios</a>
+    <button id="btnAdmin" type="button" onclick="abrirAdmin()">Panel Admin</button>
+</nav>
+
+<section class="hero">
+    <h2>Bienvenido</h2>
+    <p>Disfruta de la mejor comida tradicional preparada con ingredientes frescos.</p>
+</section>
+
+<section id="menu">
+    <h2>Nuestro Menú</h2>
+    <div id="menuList"></div>
+</section>
+
+<section id="comentarios">
+    <h2>Comentarios</h2>
+
+    <input type="text" id="nombre" placeholder="Tu nombre">
+
+    <textarea id="comentario" placeholder="Escribe tu comentario"></textarea>
+
+    <button onclick="agregarComentario()">Enviar</button>
+
+    <div id="listaComentarios"></div>
+</section>
+
+<footer>
+    <p>© 2026 Restaurante La Tradición</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Restaurante La Tradición</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: #f7f1e3;
+            color: #3d2b1f;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #5b3a29;
+        }
+
+        .panel {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.15);
+        }
+
+        form {
+            display: grid;
+            gap: 12px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bca28a;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #5b3a29;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #8b6b4a;
+        }
+
+        .product-row,
+        .comment-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-top: 12px;
+            padding: 12px;
+            border: 1px solid #e3d6c4;
+            border-radius: 8px;
+            background: #fffaf3;
+        }
+
+        .product-edit {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .comment-row {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .danger {
+            background: #a43d2d;
+        }
+
+        .danger:hover {
+            background: #7e2f22;
+        }
+
+        .muted {
+            color: #6b4e36;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Panel de Administración</h1>
+
+        <section class="panel">
+            <h2>Agregar producto al menú</h2>
+            <form id="formProducto">
+                <input type="text" id="nombreProducto" placeholder="Nombre del producto" required>
+                <input type="text" id="precioProducto" placeholder="Precio" required>
+                <input type="text" id="imagenProducto" placeholder="Ruta de la imagen (opcional)">
+                <button type="submit">Agregar producto</button>
+            </form>
+
+            <div id="listaProductos"></div>
+        </section>
+
+        <section class="panel">
+            <h2>Administrar comentarios</h2>
+            <div id="listaComentarios"></div>
+        </section>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
